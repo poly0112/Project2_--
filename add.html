@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+    function check(){
+	    var uname=document.form1.uname;
+        var phone=document.form1.phone;
+    if(uname.value ==''){
+    	alert("userid를 입력하세요");
+        uname.focus();
+        return;
+        }
+    if(phone.value ==''){
+    	alert("passwd를 입력하세요");
+        passwd.focus();
+        return ;
+        }
+    alert("게시물이 추가됩니다");
+      document.form1.submit()
+}
+</script>
+</head>
+<body>
+    <h1>개인 정보 입력</h1>
+    <form name="form1" method="post" action="">
+    이름: <input type="text" id="uname"   name="uname" required><br>
+    관계: 
+        <select name="relation" id="relation">
+        <option value="1">가족</option>
+        <option value="2">친구</option>
+        <option value="3">직장동료</option>
+        <option value="4">지인</option>
+        <option value="5">애인</option>
+        </select><br>
+    전화번호: <input type="text" id="phone"   name="phone" placeholder="00*-000*-0000" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{3,4}" maxlength="13"><br>
+    생일: <input type="date" id="birth" name="birth"><br>
+    <input type="button" value="추가" onclick=check()>
+        </form>
+</body>
+</html>
