@@ -236,23 +236,17 @@
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
           <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="https://starlit-khapse-871312.netlify.app/index.html">
-                    <svg class="bi"><use xlink:href="#house-fill"/></svg>
-                    index
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="https://starlit-khapse-871312.netlify.app/view.html">
-                    <svg class="bi"><use xlink:href="#file-earmark"/></svg>
-                    view
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="https://starlit-khapse-871312.netlify.app/add.html">
-                    <svg class="bi"><use xlink:href="#cart"/></svg>
-                    add
-                  </a>
-            </li>
+                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="index.html">
+                  <svg class="bi"><use xlink:href="#house-fill"/></svg>
+                  index
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center gap-2" href="view.html">
+                  <svg class="bi"><use xlink:href="#file-earmark"/></svg>
+                  view
+                </a>
+              </li>
         </div>
       </div>
     </div>
@@ -260,12 +254,12 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1>개인 정보</h1>
-
-    <form name="form1" method="post" action="">
-    <input type="button" value="Edit" onclick="location.href='edit.html'">
-    <input type="button" value="Delete" onclick="alert('게시물을 삭제할까요?')">
-        </form>
       </div>
+      <form name="form1" method="post" action="">
+        <input type="button" value="Edit" onclick="location.href='edit.html'">
+        <input type="button" value="Delete" onclick="confirm('게시물을 삭제할까요?')">
+        <input type="button" value="돌아가기" onclick="location.href='index.html'">
+            </form>
     </main>
   </div>
 </div>

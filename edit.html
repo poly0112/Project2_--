@@ -31,8 +31,12 @@
         passwd.focus();
         return ;
         }
-    alert("게시물을 수정할까요?");
-      document.form1.submit()
+        if (confirm("게시물을 수정할까요?")) {
+        document.form1.submit()
+      location.href="view.html"
+    } else {
+        return;
+    }
 }
 </script>
     <style>
@@ -254,23 +258,17 @@
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
           <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="https://starlit-khapse-871312.netlify.app/index.html">
-                    <svg class="bi"><use xlink:href="#house-fill"/></svg>
-                    index
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="https://starlit-khapse-871312.netlify.app/view.html">
-                    <svg class="bi"><use xlink:href="#file-earmark"/></svg>
-                    view
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="https://starlit-khapse-871312.netlify.app/add.html">
-                    <svg class="bi"><use xlink:href="#cart"/></svg>
-                    add
-                  </a>
-            </li>
+                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="index.html">
+                  <svg class="bi"><use xlink:href="#house-fill"/></svg>
+                  index
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center gap-2" href="view.html">
+                  <svg class="bi"><use xlink:href="#file-earmark"/></svg>
+                  view
+                </a>
+              </li>
         </div>
       </div>
     </div>
@@ -291,6 +289,7 @@
     전화번호: <input type="text" id="phone"   name="phone" placeholder="00*-000*-0000" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{3,4}" maxlength="13"><br>
     생일: <input type="date" id="birth" name="birth"><br>
     <input type="button" value="수정" onclick=check()>
+    <input type="button" value="취소" onclick="location.href='view.html'">
         </form>
       </div>
     </main>
